@@ -1,11 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/main.css">
     <title>Document</title>
 </head>
 <body>
-    
+    <nav>
+        <div>
+            <div class="nav-index">
+                <a href="index.html"><img src="img/logo.jpg" width="100px" alt=""></a>
+                <h1>DevMode ON</h1>
+                <button>
+                    <a href="carrito.html">
+                        <img src="assets/img/iconos/carrito-de-compras.png" alt=""><span id="numero" class="numero">0</span>
+                    </a>
+                </button>
+            </div>
+            <ul class="menu">
+                <li>
+                    <button id="todos">Productos</button>
+                </li>
+                <li>
+                    <button id="procesadores">Procesadores</button>
+                </li>
+                <li>
+                    <button id="graficas">Placas Gráficas</button>
+                </li>
+                <li>
+                    <button id="placasMadre">Placas Madre</button>
+                </li>
+                <li>
+                    <button id="almacenamiento">Almacenamiento</button>
+                </li>
+                <li>
+                    <button id="gabinetes">Gabinetes</button>
+                </li>
+                <li>
+                    <button id="fuentes">Fuentes</button>
+                </li>
+                <li>
+                    <button id="monitores">Monitores</button>
+                </li>
+                <li>
+                    <button id="perifericos">Perifericos</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <h2>PRODUCTOS</h2>
+        <div id="contenedor-productos" class="contenedor-productos">
+            <!-- Productos se cargan desde JS -->
+        </div>
+    </main>
+
+    <script src="./assets/js/main.js"></script>
 </body>
 </html>
