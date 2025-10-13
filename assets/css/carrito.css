@@ -1,0 +1,202 @@
+nav.Carrito {
+    background-color: #1c1c1c;
+    border-bottom: 5px solid #9500ffb7;
+    box-shadow: 0 5px 15px rgba(255, 0, 242, 0.2);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    list-style: none;
+}
+
+nav.Carrito li {
+    list-style: none;
+}
+body {
+    background-image: url(../img/fondo/dark_mode.jpeg);
+    color: #530256;
+    min-height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0;
+    padding: 0;
+}
+
+.Boton-menu,
+.boton-carrito {
+    color: #f0f0f0;
+    padding: 10px 15px;
+    border-radius: 0; 
+    cursor: pointer;
+    transition: all 0.2s linear;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+}
+
+.Boton-menu.boton-volver {
+    background-color: transparent;
+    border: 1px solid #ff3366;
+    box-shadow: 0 0 3px #ff3366;
+}
+
+.Boton-menu.boton-volver:hover {
+    background-color: #ff3366;
+    color: #0a0a0a;
+    border-color: #ff3366;
+    transform: none; 
+    box-shadow: 0 0 8px #ff3366;
+}
+
+.boton-carrito.activo {
+    background-color: #9500ffb7;
+    color: #0a0a0a;
+    border: 1px solid #9500ffb7;
+    box-shadow: 0 0 10px #9500ffb7;
+}
+
+main .titulo {
+    color: #ff3366;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #ff3366;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 0 0 3px #ff3366;
+}
+
+.Contenedor-carrito {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-height: 200px;
+    padding: 20px;
+    background-color: #0a0a0a; 
+    border-radius: 0;
+    border: 1px solid #9500ffb7; 
+    box-shadow: 0 0 15px rgba(149, 0, 255, 0.4);
+}
+
+.carrito-vacio,
+.carrito-comprado {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #f0f0f0;
+    padding: 50px 20px;
+    border: 1px solid #9500ffb7;
+    border-radius: 0;
+    margin: 20px 0;
+    text-shadow: 0 0 5px #9500ff60;
+    line-height: 1.5; 
+}
+
+.carrito-comprado {
+    color: #33ff99;
+    border: 1px solid #33ff99;
+    text-shadow: 0 0 8px #33ff99;
+}
+
+.desactivado {
+    display: none;
+}
+
+.carrito-acciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    padding: 15px 0;
+    border-top: 1px solid #ff3366; 
+}
+
+.carrito-acciones-izquierda {}
+
+.carrito-acciones-vaciar {
+    background-color: transparent;
+    color: #ff3366;
+    border: 1px solid #ff3366;
+    padding: 10px 15px;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 0.1s linear;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0 0 5px #ff3366;
+}
+
+.carrito-acciones-vaciar:hover {
+    background-color: #ff3366;
+    color: #0a0a0a;
+    box-shadow: 0 0 12px #ff3366;
+}
+
+.carrito-acciones-derecha {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.carrito-acciones-total {
+    display: flex;
+    gap: 15px;
+    font-size: 1.5rem;
+    color: #f0f0f0;
+}
+
+.carrito-acciones-total p:first-child {
+    font-weight: normal;
+    color: #9500ffb7;
+}
+
+#total {
+    font-weight: bold;
+    color: #ff3366;
+    text-shadow: 0 0 8px #ff336680;
+}
+
+.carrito-acciones-comprar {
+    background-color: #9500ffb7;
+    color: #0a0a0a;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 0.1s linear;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 0 10px #9500ffb7;
+}
+
+.carrito-acciones-comprar:hover {
+    background-color: #ff3366;
+    box-shadow: 0 0 15px #ff3366;
+}
+
+@media (max-width: 768px) {
+    .carrito-acciones {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .carrito-acciones-derecha {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .carrito-acciones-total {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .carrito-acciones-comprar {
+        width: 100%;
+    }
+}
