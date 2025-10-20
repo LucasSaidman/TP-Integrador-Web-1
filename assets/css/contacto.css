@@ -6,6 +6,9 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
     background-image: url(../img/fondo/dark_mode.jpeg);
     color: #530256;
     min-height: 100dvh;
@@ -102,6 +105,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    list-style: none;
 }
 
 .menu li {
@@ -135,4 +139,94 @@ nav {
     border-color: #ff3366;
     box-shadow: 0 0 15px #ff3366;
     transform: none;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    flex: 1 0 auto;
+}
+
+/* FOOTER */
+
+footer {
+    background: #0f0f11;
+    border-top: 4px solid rgba(149, 0, 255, 0.14);
+    color: #fff;
+    padding: 28px 20px;
+    font-size: 0.95rem;
+}
+
+footer .text-center {
+    text-align: center;
+    color: #ff3366;
+    margin-bottom: 12px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+}
+
+footer .redes {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 14px;
+}
+
+footer .redes a {
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    border-radius: 6px;
+    background: rgba(149,0,255,0.08);
+    display: grid;
+    place-items: center;
+    transition: transform .12s ease, background .12s ease;
+}
+
+footer .redes a img {
+    width: 22px;
+    height: 22px;
+    display: block;
+}
+
+footer .redes a:hover {
+    transform: translateY(-4px);
+    background: linear-gradient(180deg,#9500ffb7,#7a00c0);
+}
+
+footer .footer {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 18px;
+    justify-content: center;
+    padding: 0;
+    margin: 0 0 12px 0;
+}
+
+footer .footer li {
+    min-width: 140px;
+    text-align: center;
+}
+
+footer .footer li a {
+    color: #dcdcdc;
+    text-decoration: none;
+    transition: color .12s ease, transform .12s ease;
+    display: inline-block;
+    padding: 6px 4px;
+}
+
+footer .footer li a:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+footer p {
+    text-align: center;
+    color: #cfcfcf;
+    margin-top: 6px;
+    font-size: 0.9rem;
 }
