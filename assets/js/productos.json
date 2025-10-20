@@ -1,0 +1,189 @@
+[
+    {
+        "id": "procesador-r3",
+        "titulo": "AMD Ryzen 3 5300G",
+        "imagen": "assets/img/productos/procesadores/Ryzen 3 5300G.jpg",
+        "descripcion": "Procesador AMD Ryzen 3 de 5ta generación",
+        "categoria": {
+            "nombre": "Procesadores",
+            "id": "procesadores"
+        },
+        "precio": 123500
+    },
+    {
+        "id": "procesador-i3",
+        "titulo": "Intel I3 13100",
+        "imagen": "assets/img/productos/procesadores/I3 13100.webp",
+        "descripcion": "Procesador Intel I5 de 13ra generación",
+        "categoria": {
+            "nombre": "Procesadores",
+            "id": "procesadores"
+        },
+        "precio": 128999
+    },
+    {
+        "id": "procesador-r5",
+        "titulo": "AMD Ryzen 5 5600X",
+        "imagen": "assets/img/productos/procesadores/Ryzen 5 5600X.jpg",
+        "descripcion": "Procesador AMD Ryzen 7 de 5ta generación",
+        "categoria": {
+            "nombre": "Procesadores",
+            "id": "procesadores"
+        },
+        "precio": 204900
+    },
+    {
+        "id": "procesador-i5",
+        "titulo": "Intel I5 13600K",
+        "imagen": "assets/img/productos/procesadores/I5 13600K.webp",
+        "descripcion": "Procesador Intel I5 de 13ra generación",
+        "categoria": {
+            "nombre": "Procesadores",
+            "id": "procesadores"
+        },
+        "precio": 211999
+    },
+    {
+        "id": "procesador-r7",
+        "titulo": "AMD Ryzen 7 5800X",
+        "imagen": "assets/img/productos/procesadores/Ryzen 7 5800X.jpg",
+        "descripcion": "Procesador AMD Ryzen 7 de 5ta generación",
+        "categoria": {
+            "nombre": "Procesadores",
+            "id": "procesadores"
+        },
+        "precio": 269000
+    },
+    {
+        "id": "procesador-i7",
+        "titulo": "Intel I7 13700K",
+        "imagen": "assets/img/productos/procesadores/I7 13700K.webp",
+        "descripcion": "Procesador Intel I7 de 13ra generación",
+        "categoria": {
+            "nombre": "Procesadores",
+            "id": "procesadores"
+        },
+        "precio": 273999
+    },
+    {
+        "id": "procesador-r9",
+        "titulo": "AMD Ryzen 9 5900X",
+        "imagen": "assets/img/productos/procesadores/Ryzen 9 5900X.jpg",
+        "descripcion": "Procesador AMD Ryzen 9 de 5ta generación",
+        "categoria": {
+            "nombre": "Procesadores",
+            "id": "procesadores"
+        },
+        "precio": 435999
+    },
+    {
+        "id": "procesador-i9",
+        "titulo": "Intel I9 13900K",
+        "imagen": "assets/img/productos/procesadores/I9 13900K.jpg",
+        "descripcion": "Procesador Intel I9 de 13ra generación",
+        "categoria": {
+            "nombre": "Procesadores",
+            "id": "procesadores"
+        },
+        "precio": 453999
+    },
+    {
+        "id": "grafica-4060",
+        "titulo": "RTX 4060 Aorus Elite",
+        "imagen": "assets/img/productos/graficas/RTX 4060 Aorus Elite.webp",
+        "descripcion": "Placa gráfica NVIDIA RTX 4060 Aorus Elite",
+        "categoria": {
+            "nombre": "Gráficas",
+            "id": "graficas"
+        },
+        "precio": 568600
+    },
+    {
+        "id": "grafica-4070",
+        "titulo": "RTX 4070 MSI Gaming X Trio",
+        "imagen": "assets/img/productos/graficas/RTX 4070 MSI Gaming X Trio.webp",
+        "descripcion": "Placa gráfica NVIDIA RTX 4070 MSI Gaming X Trio",
+        "categoria": {
+            "nombre": "Gráficas",
+            "id": "graficas"
+        },
+        "precio": 721400
+    },
+    {
+        "id": "grafica-4080",
+        "titulo": "RTX 4080 Gigabyte Gaming OC",
+        "imagen": "assets/img/productos/graficas/RTX 4080 Gigabyte Gaming OC.webp",
+        "descripcion": "Placa gráfica NVIDIA RTX 4080 Gigabyte Gaming OC",
+        "categoria": {
+            "nombre": "Gráficas",
+            "id": "graficas"
+        },
+        "precio": 1347999
+    },
+    {
+        "id": "grafica-4090",
+        "titulo": "RTX 4090 Rog Strix",
+        "imagen": "assets/img/productos/graficas/RTX 4090 Asus Rog Strix Gaming OC.jpg",
+        "descripcion": "Placa gráfica NVIDIA RTX 4090 Asus Rog Strix gaming OC",
+        "categoria": {
+            "nombre": "Gráficas",
+            "id": "graficas"
+        },
+        "precio": 1784999
+    },
+    {
+        "id": "gabinete",
+        "titulo": "Corsair Crystal 680X",
+        "imagen": "assets/img/productos/gabinetes/Corsair Crystal 680X.jpg",
+        "descripcion": "Gabinete Corsair Crystal 680X Full Tower",
+        "categoria": {
+            "nombre": "Gabinetes",
+            "id": "gabinetes"
+        },
+        "precio": 249000
+    },
+    {
+        "id": "teclado",
+        "titulo": "Logitech G413 Carbon",
+        "imagen": "assets/img/productos/perifericos/Teclado Logitech G413 Carbon.jpg",
+        "descripcion": "Teclado mecánico Logitech G413 Carbon, con switches Romer G",
+        "categoria": {
+            "nombre": "Perifericos",
+            "id": "perifericos"
+        },
+        "precio": 55000
+    },
+    {
+        "id": "monitor",
+        "titulo": "Aorus CV27F",
+        "imagen": "assets/img/productos/monitores/Aorus Curvo 165hz CV27F.jpg",
+        "descripcion": "Monitor Aorus CV27F, de 27 pulgadas curvo, con panel VA, 1ms de respuesta y 165hz",
+        "categoria": {
+            "nombre": "Monitores",
+            "id": "monitores"
+        },
+        "precio": 350000
+    },
+    {
+        "id": "mouse",
+        "titulo": "HyperX Pulsefire Surge",
+        "imagen": "assets/img/productos/perifericos/Mouse HyperX Pulsefire Surge.jpg",
+        "descripcion": "Mouse HyperX Pulsefire Surge RGB, sensor optico y 16000 dpi",
+        "categoria": {
+            "nombre": "Perifericos",
+            "id": "perifericos"
+        },
+        "precio": 32000
+    },
+    {
+        "id": "Microfono",
+        "titulo": "Microfono HyperX Quadcast",
+        "imagen": "assets/img/productos/perifericos/Microfono HyperX Quadcast.jpg",
+        "descripcion": "Teclado mecánico Logitech G413 Carbon, con switches Romer G",
+        "categoria": {
+            "nombre": "Perifericos",
+            "id": "perifericos"
+        },
+        "precio": 78290
+    }
+]

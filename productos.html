@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/contacto.css">
-    <title>Contacto</title>
+    <link rel="stylesheet" href="assets/css/productos.css">
+    <title>Document</title>
 </head>
 <body>
     <nav>
@@ -20,33 +20,39 @@
             </div>
             <ul class="menu">
                 <li>
-                    <a href="index.html">
-                        <button id="inicio">Inicio</button>
-                    </a>
+                    <button id="todos" class="activo">Todos</button>
                 </li>
                 <li>
-                    <a href="productos.html">
-                        <button id="productos">Productos</button>
-                    </a>
+                    <button id="procesadores" class="boton-categoria">Procesadores</button>
+                </li>
+                <li>
+                    <button id="graficas" class="boton-categoria">Placas Gráficas</button>
+                </li>
+                <li>
+                    <button id="placasMadre" class="boton-categoria">Placas Madre</button>
+                </li>
+                <li>
+                    <button id="almacenamiento" class="boton-categoria">Almacenamiento</button>
+                </li>
+                <li>
+                    <button id="gabinetes" class="boton-categoria">Gabinetes</button>
+                </li>
+                <li>
+                    <button id="fuentes" class="boton-categoria">Fuentes</button>
+                </li>
+                <li>
+                    <button id="monitores" class="boton-categoria">Monitores</button>
+                </li>
+                <li>
+                    <button id="perifericos" class="boton-categoria">Perifericos</button>
                 </li>
             </ul>
         </div>
     </nav>
     <main>
-        <h2>CONTACTO</h2>
-        <div id="contenedor-contacto" class="contenedor-contacto">
-            <div class="container-contacto">
-            <h1>Formulario de Contacto</h1>
-            <form action="envio.php" method="post">
-              <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
-              <input type="tel" id="phone" name="phone" placeholder="Teléfono">
-              <input type="email" id="email" name="email" placeholder="Email" required>
-              <textarea id="message" name="message" placeholder="Mensaje" required></textarea>
-              <button class="btn" type="submit">Enviar</button>
-            </form>
-        </div>
-        <h2>¿Donde Encontrarnos?</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6809.064331515172!2d-64.18078385956585!3d-31.427013337105233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a28ddf861391%3A0xc0fdcfc930551a76!2sPlaza%20Espa%C3%B1a!5e0!3m2!1ses!2sar!4v1684868016837!5m2!1ses!2sar" class="maps" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <h2 class="titulo-principal">PRODUCTOS</h2>
+        <div id="contenedor-productos" class="contenedor-productos">
+            <!-- Productos se cargan desde JS -->
         </div>
     </main>
     <footer>
@@ -93,6 +99,6 @@
         </div>
     </footer>
 
-    <script src="./assets/js/contacto.js"></script>
+    <script src="./assets/js/productos.js"></script>
 </body>
 </html>
