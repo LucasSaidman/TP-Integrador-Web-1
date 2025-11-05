@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,30 +9,30 @@
 <body>
     <nav class="Carrito">
         <li>
-            <a class="Boton-menu boton-volver" href="index.html">seguir comprando</a>   
-        </li>
-        <li>
-            <a class="boton-carrito activo">Carrito</a>
+            <a class="Boton-menu boton-volver" href="productos.html">seguir comprando</a>   
         </li>
     </nav>
     <main>
-        <h2 class="titulo">Carrito </h2>
+        <h2 class="titulo">Carrito</h2>
         <div class="Contenedor-carrito">
             <p id="carrito-vacio" class="carrito-vacio">Tu carrito esta vacio</p>
-        </div>
-        <div id="carrito-acciones" class="carrito-acciones desactivado">
-            <div class="carrito-acciones-izquierda">
-                <button id="carrito-acciones-vaciar"  class="carrito-acciones-vaciar">Vaciar carrito</button>
+            <div id="carrito-productos" class="carrito-productos desactivado">
+                <!-- Esto se va a completar con JS -->
             </div>
-            <div class="carrito-acciones-derecha">
-                <div class="carrito-acciones-total">
-                    <p>Total:</p>
-                    <p id="total">$0</p>
+            <div id="carrito-acciones" class="carrito-acciones desactivado">
+                <div class="carrito-acciones-izquierda">
+                    <button id="carrito-acciones-vaciar"  class="carrito-acciones-vaciar">Vaciar carrito</button>
                 </div>
-                <button id="carrito-acciones-comprar" class="carrito-acciones-comprar">Comprar</button>
+                <div class="carrito-acciones-derecha">
+                    <div class="carrito-acciones-total">
+                        <p>Total:</p>
+                        <p id="total">$0</p>
+                    </div>
+                    <button id="carrito-acciones-comprar" class="carrito-acciones-comprar">Comprar</button>
+                </div>
             </div>
+            <p id="carrito-comprado" class="carrito-comprado desactivado">Muchas Gracias por tu compra</p>
         </div>
-        <!-- <p id="carrito-comprado" class="carrito-comprado desactivado">Muchas Gracias por tu compra.</p> -->
     </main>
     <footer>
         <h3 class="text-center">Nuestras redes</h3>

@@ -132,8 +132,6 @@ main .titulo {
     border-top: 1px solid #ff3366; 
 }
 
-.carrito-acciones-izquierda {}
-
 .carrito-acciones-vaciar {
     background-color: transparent;
     color: #ff3366;
@@ -220,7 +218,6 @@ main .titulo {
     }
 }
 
-/* Estilos para la tabla del carrito */
 .carrito-tabla {
     width: 100%;
     border-collapse: collapse;
