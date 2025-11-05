@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -37,9 +36,7 @@ nav {
     padding: 15px 20px;
 }
 
-
 .nav-index {
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -289,4 +286,119 @@ footer p {
     color: #cfcfcf;
     margin-top: 6px;
     font-size: 0.9rem;
+}
+
+/* === Carrusel === */
+/* === Carrusel === */
+.carrusel {
+    position: relative;
+    max-width: 1100px;
+    width: 90%;
+    margin: 50px auto 200px auto; 
+    overflow: hidden;
+    border-radius: 25px;
+    background-color: #0a0a0a; 
+    height: 400px;
+}
+
+.carrusel-container {
+    display: flex;
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+
+.carrusel-item {
+    min-width: 100%;
+    display: none;
+    width: 100%;
+    position: relative;
+    height: 100%;
+    
+}
+
+.carrusel-item.active {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.carrusel-item img {
+    width: auto;
+    height: auto;
+    max-height: 85%; 
+    max-width: 90%;  
+    object-fit: contain; 
+    border-radius: 15px;
+}
+
+.carrusel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 20px;
+    transition: background-color 0.3s;
+    z-index: 10;
+}
+
+.carrusel-btn:hover {
+    background-color: rgba(0,0,0,0.7);
+}
+
+.carrusel-btn.prev { left: 10px; }
+.carrusel-btn.next { right: 10px; }
+
+.carrusel-indicators {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.carrusel-indicators .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.carrusel-indicators .dot.active {
+    background-color: #333;
+}
+
+/* --- ESTILOS PARA EL BOTÓN DENTRO DEL BANNER --- */
+.boton-producto-carrusel {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    
+    display: inline-block;
+    padding: 10px 25px;
+    border: 2px solid #5d0469;
+    border-radius: 8px;
+    
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #5a0662;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: lowercase;
+    
+    transition: all 0.3s ease;
+}
+
+.boton-producto-carrusel:hover {
+    background-color: #4c0f57;
+    color: #000;
 }

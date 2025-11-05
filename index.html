@@ -32,11 +32,33 @@
             </ul>
         </div>
     </nav>
-    <main>
-        <div>
-            
+   <main>
+ <div class="carrusel">
+    <div class="carrusel-container">
+        <div class="carrusel-item active">
+         <img src="assets/img/banners/banner1.jpg">
+            <a href="productos.html" class="boton-producto-carrusel">ir a este producto</a>
         </div>
-    </main>
+        <div class="carrusel-item">
+         <img src="assets/img/banners/banner2.jpg">
+            <a href="productos.html" class="boton-producto-carrusel">ir a este producto</a>
+        </div>
+        <div class="carrusel-item">
+         <img src="assets/img/banners/banner3.jpg">
+            <a href="productos.html" class="boton-producto-carrusel">ir a este producto</a>
+        </div>
+    </div>
+
+    <button class="carrusel-btn prev">&#10094;</button>
+    <button class="carrusel-btn next">&#10095;</button>
+
+    <div class="carrusel-indicators">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        </div>
+    </div>
+</main>
     <footer>
         <h3 class="text-center">Nuestras redes</h3>
         <div class="redes">
@@ -80,7 +102,7 @@
             <p>© 2024 DevMode ON - Todos los derechos reservados</p>
         </div>
     </footer>
-
-    <script src="./assets/js/productos.js"></script>
+    <script src="./assets/js/carrusel.js"></script>
+    /*<script src="./assets/js/productos.js"></script>
 </body>
 </html>
