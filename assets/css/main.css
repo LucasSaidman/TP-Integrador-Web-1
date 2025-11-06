@@ -30,7 +30,7 @@ a {
 }
 
 nav {
-    background-color: #1c1c1c;
+    background-color: black;
     border-bottom: 5px solid #9500ffb7;
     box-shadow: 0 5px 15px rgba(255, 0, 242, 0.2);
     padding: 15px 20px;
@@ -63,7 +63,7 @@ nav {
 }
 
 .nav-index button {
-    background-color: #1c1c1c;
+    background-color: black;
     border: 2px solid #ff3366;
     border-radius: 0;
     padding: 8px 12px;
@@ -96,7 +96,7 @@ nav {
     top: -8px;
     right: -8px;
     background-color: #ff3366;
-    color: #0a0a0a;
+    color: black;
     font-size: 0.8rem;
     font-weight: bold;
     border-radius: 50%;
@@ -104,7 +104,7 @@ nav {
     min-width: 22px;
     text-align: center;
     line-height: 1.2;
-    border: 2px solid #0a0a0a;
+    border: 2px solid black;
 }
 
 .menu {
@@ -120,7 +120,7 @@ nav {
 .menu button {
     width: 100%;
     background-color: transparent;
-    color: #f0f0f0;
+    color: white;
     border: 1px solid #530256;
     padding: 10px 15px;
     border-radius: 2px;
@@ -132,7 +132,7 @@ nav {
 
 .menu button:hover {
     background-color: #9500ffb7;
-    color: #0a0a0a;
+    color: black;
     border-color: #9500ffb7;
     transform: skewX(-5deg);
     box-shadow: 0 0 10px #9500ffb7;
@@ -140,7 +140,7 @@ nav {
 
 .menu button.activo {
     background-color: #ff3366;
-    color: #0a0a0a;
+    color: black;
     border-color: #ff3366;
     box-shadow: 0 0 15px #ff3366;
     transform: none;
@@ -209,9 +209,9 @@ main h2 {
 /* FOOTER */
 
 footer {
-    background: #0f0f11;
+    background: black;
     border-top: 4px solid rgba(149, 0, 255, 0.14);
-    color: #fff;
+    color: white;
     padding: 28px 20px;
     font-size: 0.95rem;
 }
@@ -269,7 +269,7 @@ footer .footer li {
 }
 
 footer .footer li a {
-    color: #dcdcdc;
+    color: white;
     text-decoration: none;
     transition: color .12s ease, transform .12s ease;
     display: inline-block;
@@ -277,28 +277,26 @@ footer .footer li a {
 }
 
 footer .footer li a:hover {
-    color: #ffffff;
+    color: white;
     transform: translateY(-2px);
 }
 
 footer p {
     text-align: center;
-    color: #cfcfcf;
+    color: white;
     margin-top: 6px;
     font-size: 0.9rem;
 }
 
-/* === Carrusel === */
+
 /* === Carrusel === */
 .carrusel {
     position: relative;
-    max-width: 1100px;
-    width: 90%;
-    margin: 50px auto 200px auto; 
+    width: 70dvi;
     overflow: hidden;
     border-radius: 25px;
-    background-color: #0a0a0a; 
-    height: 400px;
+    background-color: black; 
+    height: 500px;
 }
 
 .carrusel-container {
@@ -324,11 +322,10 @@ footer p {
 }
 
 .carrusel-item img {
-    width: auto;
-    height: auto;
-    max-height: 85%; 
-    max-width: 90%;  
-    object-fit: contain; 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
     border-radius: 15px;
 }
 
@@ -376,7 +373,6 @@ footer p {
     background-color: #333;
 }
 
-/* --- ESTILOS PARA EL BOTÓN DENTRO DEL BANNER --- */
 .boton-producto-carrusel {
     position: absolute;
     bottom: 30px;
@@ -400,5 +396,108 @@ footer p {
 
 .boton-producto-carrusel:hover {
     background-color: #4c0f57;
-    color: #000;
+    color: black;
+}
+
+.site-info {
+    width: 100%;
+    max-width: 80dvi;
+    margin: 32px auto 40px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: linear-gradient(180deg, rgba(30,12,40,0.78), rgba(12,12,14,0.68));
+    border: 1px solid rgba(149,0,255,0.22);
+    border-radius: 14px;
+    box-shadow: 0 14px 36px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+    backdrop-filter: blur(6px) saturate(120%);
+}
+
+.info-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.site-info article {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.03));
+    border-radius: 10px;
+    padding: 18px;
+    border: 1px solid rgba(149,0,255,0.16);
+    flex: 1 1 320px;
+    min-width: 240px;
+    box-sizing: border-box;
+    gap: 8px;
+    min-height: 140px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+}
+
+.site-info h3 {
+    margin: 0 0 8px;
+    color: #9500ffb7;
+    font-size: 1.05rem;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+}
+
+.site-info p,
+.site-info ul {
+    color: white;
+    font-size: 0.95rem;
+    line-height: 1.45;
+}
+
+.site-info ul {
+    padding-left: 16px;
+}
+
+.site-info li {
+    margin-bottom: 6px;
+}
+
+.btn-ver-productos {
+    display: inline-block;
+    margin-top: auto;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+    background: linear-gradient(180deg, #9500ffb7, #7a00c0);
+    border: 2px solid rgba(149,0,255,0.18);
+    box-shadow: 0 8px 18px rgba(149,0,255,0.08);
+    transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+    align-self: flex-start;
+}
+
+.btn-ver-productos:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(180deg,#ff3366,#e6004d);
+    color: white;
+    box-shadow: 0 12px 28px rgba(255,51,102,0.12);
+}
+
+.slogan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 8px;
+    margin-top: 6px;
+}
+
+.slogan-text {
+    color: #ff3366;
+    font-size: 1.9rem;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 0.6px;
+    text-shadow: 0 0 8px rgba(255,51,102,0.08);
 }
