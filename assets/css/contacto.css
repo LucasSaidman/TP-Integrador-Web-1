@@ -10,7 +10,7 @@ body {
     flex-direction: column;
     min-height: 100dvh;
     background-image: url(../img/fondo/dark_mode.jpeg);
-    color: #530256;
+    color: rgb(83, 2, 86);
     min-height: 100dvh;
     background-size: cover;
     background-attachment: fixed;
@@ -21,8 +21,8 @@ body {
 }
 
 nav {
-    background-color: #1c1c1c;
-    border-bottom: 5px solid #9500ffb7;
+    background-color: rgb(28, 28, 28);
+    border-bottom: 5px solid rgba(149, 0, 255, 0.718);
     box-shadow: 0 5px 15px rgba(255, 0, 242, 0.2);
     padding: 15px 20px;
 }
@@ -39,7 +39,7 @@ nav {
 
 .nav-index img {
     border-radius: 2px;
-    border: 1px solid #9500ffb7;
+    border: 1px solid rgba(149, 0, 255, 0.718);
     transition: transform 0.2s;
 }
 
@@ -50,27 +50,27 @@ nav {
 .nav-index h1 {
     text-align: center;
     font-size: 2rem;
-    color: #9500ffb7;
-    text-shadow: 0 0 5px #9500ffb7;
+    color: rgba(149, 0, 255, 0.718);
+    text-shadow: 0 0 5px rgba(149, 0, 255, 0.718);
     text-transform: uppercase;
     flex-grow: 1;
 }
 
 .nav-index button {
-    background-color: #1c1c1c;
-    border: 2px solid #ff3366;
+    background-color: black;
+    border: 2px solid rgb(255, 51, 102);
     border-radius: 0;
     padding: 8px 12px;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     position: relative;
-    box-shadow: 0 0 5px #ff3366;
+    box-shadow: 0 0 5px rgb(255, 51, 102);
 }
 
 .nav-index button:hover {
-    background-color: #ff3366;
+    background-color: rgb(255, 51, 102);
     transform: scale(1.05);
-    box-shadow: 0 0 10px #ff3366;
+    box-shadow: 0 0 10px rgb(255, 51, 102);
 }
 
 .nav-index button a {
@@ -89,8 +89,8 @@ nav {
     position: absolute;
     top: -8px;
     right: -8px;
-    background-color: #ff3366;
-    color: #0a0a0a;
+    background-color: rgb(255, 51, 102);
+    color: black;
     font-size: 0.8rem;
     font-weight: bold;
     border-radius: 50%;
@@ -98,7 +98,7 @@ nav {
     min-width: 22px;
     text-align: center;
     line-height: 1.2;
-    border: 2px solid #0a0a0a;
+    border: 2px solid black;
 }
 
 .menu {
@@ -116,7 +116,7 @@ nav {
     width: 100%;
     background-color: transparent;
     color: #f0f0f0;
-    border: 1px solid #530256;
+    border: 1px solid rgb(83, 2, 86);
     padding: 10px 15px;
     border-radius: 2px;
     cursor: pointer;
@@ -126,18 +126,18 @@ nav {
 }
 
 .menu button:hover {
-    background-color: #9500ffb7;
-    color: #0a0a0a;
-    border-color: #9500ffb7;
+    background-color: rgba(149, 0, 255, 0.718);
+    color: black;
+    border-color: rgba(149, 0, 255, 0.718);
     transform: skewX(-5deg);
-    box-shadow: 0 0 10px #9500ffb7;
+    box-shadow: 0 0 10px rgba(149, 0, 255, 0.718);
 }
 
 .menu button.activo {
-    background-color: #ff3366;
+    background-color: rgb(255, 51, 102);
     color: #0a0a0a;
-    border-color: #ff3366;
-    box-shadow: 0 0 15px #ff3366;
+    border-color: rgb(255, 51, 102);
+    box-shadow: 0 0 15px rgb(255, 51, 102);
     transform: none;
 }
 
@@ -152,16 +152,16 @@ main{
 /* FOOTER */
 
 footer {
-    background: #0f0f11;
+    background: black;
     border-top: 4px solid rgba(149, 0, 255, 0.14);
-    color: #fff;
+    color: white;
     padding: 28px 20px;
     font-size: 0.95rem;
 }
 
 footer .text-center {
     text-align: center;
-    color: #ff3366;
+    color: rgb(255, 51, 102);
     margin-bottom: 12px;
     font-weight: 700;
     letter-spacing: 0.6px;
@@ -179,7 +179,7 @@ footer .redes a {
     width: 42px;
     height: 42px;
     border-radius: 6px;
-    background: rgba(149,0,255,0.08);
+    background: rgba(149, 0, 255, 0.08);
     display: grid;
     place-items: center;
     transition: transform .12s ease, background .12s ease;
@@ -193,7 +193,7 @@ footer .redes a img {
 
 footer .redes a:hover {
     transform: translateY(-4px);
-    background: linear-gradient(180deg,#9500ffb7,#7a00c0);
+    background: linear-gradient(180deg,rgba(149, 0, 255, 0.718),rgb(122, 0, 192));
 }
 
 footer .footer {
@@ -212,7 +212,7 @@ footer .footer li {
 }
 
 footer .footer li a {
-    color: #dcdcdc;
+    color: white;
     text-decoration: none;
     transition: color .12s ease, transform .12s ease;
     display: inline-block;
@@ -220,13 +220,13 @@ footer .footer li a {
 }
 
 footer .footer li a:hover {
-    color: #ffffff;
+    color: white;
     transform: translateY(-2px);
 }
 
 footer p {
     text-align: center;
-    color: #cfcfcf;
+    color: rgb(207, 207, 207);
     margin-top: 6px;
     font-size: 0.9rem;
 }
@@ -234,10 +234,10 @@ footer p {
 /* Estilos específicos para la página de contacto */
 
 main h2 {
-    color: #9500ffb7;
+    color: rgba(149, 0, 255, 0.718);
     font-size: 2.5rem;
     text-transform: uppercase;
-    text-shadow: 0 0 10px #9500ffb7;
+    text-shadow: 0 0 10px rgba(149, 0, 255, 0.718);
     margin-bottom: 30px;
     letter-spacing: 2px;
 }
@@ -247,7 +247,7 @@ main h2 {
     max-width: 60dvw;
     margin: 0 auto;
     background: rgba(28, 28, 28, 0.95);
-    border: 2px solid #9500ffb7;
+    border: 2px solid rgba(149, 0, 255, 0.718);
     border-radius: 10px;
     padding: 40px;
     box-shadow: 0 0 30px rgba(149, 0, 255, 0.3);
@@ -255,12 +255,12 @@ main h2 {
 }
 
 .contenedor-contacto h1 {
-    color: #ff3366;
+    color: rgb(255, 51, 102);
     font-size: 1.8rem;
     text-align: center;
     margin-bottom: 30px;
     text-transform: uppercase;
-    text-shadow: 0 0 10px #ff3366;
+    text-shadow: 0 0 10px rgb(255, 51, 102);
 }
 
 .contenedor-contacto form {
@@ -279,7 +279,7 @@ main h2 {
     width: 100%;
     padding: 12px 15px;
     background-color: rgba(15, 15, 17, 0.8);
-    border: 2px solid #530256;
+    border: 2px solid rgb(83, 2, 86);
     border-radius: 5px;
     color: #f0f0f0;
     font-size: 1rem;
@@ -290,7 +290,7 @@ main h2 {
 .contenedor-contacto input:focus,
 .contenedor-contacto textarea:focus {
     outline: none;
-    border-color: #9500ffb7;
+    border-color: rgba(149, 0, 255, 0.718);
     box-shadow: 0 0 15px rgba(149, 0, 255, 0.4);
     background-color: rgba(15, 15, 17, 0.95);
 }
@@ -308,7 +308,7 @@ main h2 {
 .contenedor-contacto button.btn {
     width: 100%;
     padding: 15px;
-    background: linear-gradient(135deg, #9500ffb7, #ff3366);
+    background: linear-gradient(135deg, rgba(149, 0, 255, 0.718), rgb(255, 51, 102));
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -324,7 +324,7 @@ main h2 {
 .contenedor-contacto button.btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 30px rgba(149, 0, 255, 0.5);
-    background: linear-gradient(135deg, #ff3366, #9500ffb7);
+    background: linear-gradient(135deg, rgb(255, 51, 102), rgba(149, 0, 255, 0.718));
 }
 
 .contenedor-contacto button.btn:active {
@@ -332,7 +332,7 @@ main h2 {
 }
 
 .error-message {
-    color: #ff3366;
+    color: rgb(255, 51, 102);
     font-size: 0.85rem;
     font-weight: bold;
     margin-top: 5px;
