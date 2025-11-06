@@ -244,19 +244,17 @@ main h2 {
 
 .contenedor-contacto {
     width: 90%;
-    max-width: 600px;
+    max-width: 60dvw;
     margin: 0 auto;
-}
-
-.container-contacto {
     background: rgba(28, 28, 28, 0.95);
     border: 2px solid #9500ffb7;
     border-radius: 10px;
     padding: 40px;
     box-shadow: 0 0 30px rgba(149, 0, 255, 0.3);
+    margin-bottom: 50px;
 }
 
-.container-contacto h1 {
+.contenedor-contacto h1 {
     color: #ff3366;
     font-size: 1.8rem;
     text-align: center;
@@ -265,19 +263,19 @@ main h2 {
     text-shadow: 0 0 10px #ff3366;
 }
 
-.container-contacto form {
+.contenedor-contacto form {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.container-contacto form div {
+.contenedor-contacto form div {
     display: flex;
     flex-direction: column;
 }
 
-.container-contacto input,
-.container-contacto textarea {
+.contenedor-contacto input,
+.contenedor-contacto textarea {
     width: 100%;
     padding: 12px 15px;
     background-color: rgba(15, 15, 17, 0.8);
@@ -289,25 +287,25 @@ main h2 {
     transition: all 0.3s ease;
 }
 
-.container-contacto input:focus,
-.container-contacto textarea:focus {
+.contenedor-contacto input:focus,
+.contenedor-contacto textarea:focus {
     outline: none;
     border-color: #9500ffb7;
     box-shadow: 0 0 15px rgba(149, 0, 255, 0.4);
     background-color: rgba(15, 15, 17, 0.95);
 }
 
-.container-contacto input::placeholder,
-.container-contacto textarea::placeholder {
+.contenedor-contacto input::placeholder,
+.contenedor-contacto textarea::placeholder {
     color: #888;
 }
 
-.container-contacto textarea {
+.contenedor-contacto textarea {
     min-height: 150px;
     resize: vertical;
 }
 
-.container-contacto button.btn {
+.contenedor-contacto button.btn {
     width: 100%;
     padding: 15px;
     background: linear-gradient(135deg, #9500ffb7, #ff3366);
@@ -323,17 +321,16 @@ main h2 {
     margin-top: 10px;
 }
 
-.container-contacto button.btn:hover {
+.contenedor-contacto button.btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 30px rgba(149, 0, 255, 0.5);
     background: linear-gradient(135deg, #ff3366, #9500ffb7);
 }
 
-.container-contacto button.btn:active {
+.contenedor-contacto button.btn:active {
     transform: translateY(-1px);
 }
 
-/* Mensajes de error */
 .error-message {
     color: #ff3366;
     font-size: 0.85rem;
@@ -341,19 +338,4 @@ main h2 {
     margin-top: 5px;
     display: block;
     text-shadow: 0 0 5px rgba(255, 51, 102, 0.5);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .container-contacto {
-        padding: 30px 20px;
-    }
-    
-    main h2 {
-        font-size: 2rem;
-    }
-    
-    .container-contacto h1 {
-        font-size: 1.5rem;
-    }
 }
