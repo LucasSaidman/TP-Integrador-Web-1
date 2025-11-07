@@ -1,34 +1,98 @@
-let currentIndex = 0;
-const items = document.querySelectorAll('.carrusel-item');
-const dots = document.querySelectorAll('.dot');
-const total = items.length;
+document.addEventListener("DOMContentLoaded", () => {
+    // Rutas de las imágenes del carrusel — modificá aquí si querés
+    const images = [
+        "assets/img/banners/banner1.jpg",
+        "assets/img/banners/banner2.jpg",
+        "assets/img/banners/banner3.jpg"
+    ];
 
-function showSlide(index) {
-    items.forEach((item, i) => {
-        item.classList.toggle('active', i === index);
-        dots[i].classList.toggle('active', i === index);
+    let currentIndex = 0;
+    const imgEl = document.getElementById("carrusel-img");
+    const indicatorsContainer = document.querySelector(".carrusel-indicators");
+    const nextBtn = document.querySelector(".carrusel-btn.next");
+    const prevBtn = document.querySelector(".carrusel-btn.prev");
+    const carrusel = document.querySelector(".carrusel");
+    const intervalMs = 5000;
+    let intervalId = null;
+
+    if (!imgEl || !indicatorsContainer || images.length === 0) return;
+
+    // Preload de imágenes
+    function preload(src) {
+        const i = new Image();
+        i.src = src;
+    }
+    images.forEach(preload);
+
+    // Crear indicadores dinámicamente
+    function createIndicators() {
+        indicatorsContainer.innerHTML = "";
+        images.forEach((_, i) => {
+            const dot = document.createElement("span");
+            dot.className = "dot";
+            dot.setAttribute("role", "button");
+            dot.setAttribute("aria-label", `Ir al slide ${i + 1}`);
+            dot.tabIndex = 0;
+            dot.addEventListener("click", () => goTo(i));
+            dot.addEventListener("keydown", (e) => {
+                if (e.key === "Enter" || e.key === " ") goTo(i);
+            });
+            indicatorsContainer.appendChild(dot);
+        });
+    }
+
+    function updateIndicators() {
+        const dots = indicatorsContainer.querySelectorAll(".dot");
+        dots.forEach((d, i) => d.classList.toggle("active", i === currentIndex));
+    }
+
+    function showSlide(index) {
+        if (images.length === 0) return;
+        currentIndex = ((index % images.length) + images.length) % images.length;
+        // transición simple: fade (requiere CSS que permita transición de opacity)
+        imgEl.style.opacity = 0;
+        setTimeout(() => {
+            imgEl.src = images[currentIndex];
+            imgEl.alt = `Banner ${currentIndex + 1}`;
+            imgEl.style.opacity = 1;
+        }, 120);
+        updateIndicators();
+        // precargar siguiente
+        preload(images[(currentIndex + 1) % images.length]);
+    }
+
+    function next() { showSlide(currentIndex + 1); }
+    function prev() { showSlide(currentIndex - 1); }
+    function goTo(i) { showSlide(i); }
+
+    function startAuto() {
+        stopAuto();
+        intervalId = setInterval(() => next(), intervalMs);
+    }
+    function stopAuto() {
+        if (intervalId) { clearInterval(intervalId); intervalId = null; }
+    }
+
+    // Eventos botones
+    if (nextBtn) nextBtn.addEventListener("click", () => { next(); startAuto(); });
+    if (prevBtn) prevBtn.addEventListener("click", () => { prev(); startAuto(); });
+
+    // Pausa al hover / touch
+    if (carrusel) {
+        carrusel.addEventListener("mouseenter", stopAuto);
+        carrusel.addEventListener("mouseleave", startAuto);
+        carrusel.addEventListener("touchstart", stopAuto, { passive: true });
+        carrusel.addEventListener("touchend", startAuto, { passive: true });
+    }
+
+    // Navegación con teclado
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowRight") { next(); startAuto(); }
+        if (e.key === "ArrowLeft") { prev(); startAuto(); }
     });
-}
 
-document.querySelector('.next').addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % total;
-    showSlide(currentIndex);
+    // Inicialización
+    createIndicators();
+    showSlide(0);
+    startAuto();
 });
-
-document.querySelector('.prev').addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + total) % total;
-    showSlide(currentIndex);
-});
-
-dots.forEach((dot, i) => {
-    dot.addEventListener('click', () => {
-        currentIndex = i;
-        showSlide(i);
-    });
-});
-
-// Cambio automático cada 5 segundos
-setInterval(() => {
-    currentIndex = (currentIndex + 1) % total;
-    showSlide(currentIndex);
-}, 5000);
