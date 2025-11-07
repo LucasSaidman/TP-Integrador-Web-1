@@ -21,10 +21,12 @@ body {
 }
 
 nav {
-    background-color: black;
-    border-bottom: 5px solid #9500ffb7;
-    box-shadow: 0 5px 15px rgba(255, 0, 242, 0.2);
-    padding: 15px 20px;
+    background: linear-gradient(180deg, rgba(30,12,40,0.88), rgba(12,12,14,0.78));
+    border: 1px solid rgba(149,0,255,0.22);
+    border-bottom: 5px solid rgba(149,0,255,0.14);
+    box-shadow: 0 14px 36px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+    backdrop-filter: blur(6px) saturate(120%);
+    padding: 12px 18px;
 }
 
 .nav-index {
@@ -55,6 +57,8 @@ nav {
 }
 
 .nav-index button {
+    width: 80px;
+    height: 80px;
     background-color: black;
     border: 2px solid #ff3366;
     border-radius: 0;
@@ -71,14 +75,9 @@ nav {
     box-shadow: 0 0 10px #ff3366;
 }
 
-.nav-index button a {
-    display: flex;
-    align-items: center;
-}
-
 .nav-index button img {
-    width: 25px;
-    height: 25px;
+    width: 40px;
+    height: 40px;
     filter: invert(0.8);
     border: none;
 }
