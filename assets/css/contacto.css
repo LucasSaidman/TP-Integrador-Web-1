@@ -115,7 +115,7 @@ nav {
 .menu button {
     width: 100%;
     background-color: transparent;
-    color: #f0f0f0;
+    color: white;
     border: 1px solid rgb(83, 2, 86);
     padding: 10px 15px;
     border-radius: 2px;
@@ -135,7 +135,7 @@ nav {
 
 .menu button.activo {
     background-color: rgb(255, 51, 102);
-    color: #0a0a0a;
+    color: black;
     border-color: rgb(255, 51, 102);
     box-shadow: 0 0 15px rgb(255, 51, 102);
     transform: none;
@@ -281,7 +281,7 @@ main h2 {
     background-color: rgba(15, 15, 17, 0.8);
     border: 2px solid rgb(83, 2, 86);
     border-radius: 5px;
-    color: #f0f0f0;
+    color: white;
     font-size: 1rem;
     font-family: 'Consolas', 'Courier New', monospace;
     transition: all 0.3s ease;
@@ -297,7 +297,7 @@ main h2 {
 
 .contenedor-contacto input::placeholder,
 .contenedor-contacto textarea::placeholder {
-    color: #888;
+    color: grey;
 }
 
 .contenedor-contacto textarea {
@@ -309,7 +309,7 @@ main h2 {
     width: 100%;
     padding: 15px;
     background: linear-gradient(135deg, rgba(149, 0, 255, 0.718), rgb(255, 51, 102));
-    color: #fff;
+    color: white;
     border: none;
     border-radius: 5px;
     font-size: 1.1rem;
