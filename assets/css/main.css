@@ -47,9 +47,10 @@ nav {
 }
 
 .nav-index img {
-    border-radius: 2px;
+    border-radius: none;
     border: 1px solid #9500ffb7;
     transition: transform 0.2s;
+    width: 70px;
 }
 .nav-index img:hover {
     transform: scale(1.05);
@@ -65,8 +66,8 @@ nav {
 }
 
 .nav-index button {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 65px;
     background-color: black;
     border: 2px solid #ff3366;
     border-radius: 0;
