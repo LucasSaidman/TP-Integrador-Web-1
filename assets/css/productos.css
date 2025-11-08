@@ -154,7 +154,7 @@ main{
     flex: 1 0 auto;
 }
 
-/* Productos */
+/* productos */
 #contenedor-productos {
     display: flex;
     flex-wrap: wrap;
