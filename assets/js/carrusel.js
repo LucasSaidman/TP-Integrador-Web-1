@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Rutas de las imágenes del carrusel — modificá aquí si querés
+    // ruta imagen
     const images = [
         "assets/img/banners/banner1.jpg",
         "assets/img/banners/banner2.jpg",
@@ -17,14 +17,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!imgEl || !indicatorsContainer || images.length === 0) return;
 
-    // Preload de imágenes
+    // precarga de imágenes
     function preload(src) {
         const i = new Image();
         i.src = src;
     }
     images.forEach(preload);
 
-    // Crear indicadores dinámicamente
+    // crea indicadores 
     function createIndicators() {
         indicatorsContainer.innerHTML = "";
         images.forEach((_, i) => {
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function showSlide(index) {
         if (images.length === 0) return;
         currentIndex = ((index % images.length) + images.length) % images.length;
-        // transición simple: fade (requiere CSS que permita transición de opacity)
+       
         imgEl.style.opacity = 0;
         setTimeout(() => {
             imgEl.src = images[currentIndex];
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
             imgEl.style.opacity = 1;
         }, 120);
         updateIndicators();
-        // precargar siguiente
+       
         preload(images[(currentIndex + 1) % images.length]);
     }
 
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (intervalId) { clearInterval(intervalId); intervalId = null; }
     }
 
-    // Eventos botones
+    //  botones
     if (nextBtn) nextBtn.addEventListener("click", () => { next(); startAuto(); });
     if (prevBtn) prevBtn.addEventListener("click", () => { prev(); startAuto(); });
 
@@ -84,14 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
         carrusel.addEventListener("touchstart", stopAuto, { passive: true });
         carrusel.addEventListener("touchend", startAuto, { passive: true });
     }
-
-    // Navegación con teclado
-    document.addEventListener("keydown", (e) => {
-        if (e.key === "ArrowRight") { next(); startAuto(); }
-        if (e.key === "ArrowLeft") { prev(); startAuto(); }
-    });
-
-    // Inicialización
+   
     createIndicators();
     showSlide(0);
     startAuto();
