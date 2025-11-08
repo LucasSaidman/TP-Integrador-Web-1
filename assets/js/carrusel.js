@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // ruta imagen
+   
     const images = [
         "assets/img/banners/banner1.jpg",
         "assets/img/banners/banner2.jpg",
@@ -17,14 +17,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!imgEl || !indicatorsContainer || images.length === 0) return;
 
-    // precarga de imágenes
+   
     function preload(src) {
         const i = new Image();
         i.src = src;
     }
     images.forEach(preload);
 
-    // crea indicadores 
+   
     function createIndicators() {
         indicatorsContainer.innerHTML = "";
         images.forEach((_, i) => {
@@ -73,11 +73,11 @@ document.addEventListener("DOMContentLoaded", () => {
         if (intervalId) { clearInterval(intervalId); intervalId = null; }
     }
 
-    //  botones
+   
     if (nextBtn) nextBtn.addEventListener("click", () => { next(); startAuto(); });
     if (prevBtn) prevBtn.addEventListener("click", () => { prev(); startAuto(); });
 
-    // Pausa al hover / touch
+   
     if (carrusel) {
         carrusel.addEventListener("mouseenter", stopAuto);
         carrusel.addEventListener("mouseleave", startAuto);

@@ -1,15 +1,15 @@
 function validarFormulario(event) {
   event.preventDefault(); 
   
-  // Limpiar errores anteriores
+  
   const erroresAnteriores = document.querySelectorAll('.error-message');
   erroresAnteriores.forEach(error => error.remove());
   
-  // Limpiar mensaje de éxito anterior
+ 
   const mensajeExito = document.querySelector('.success-message');
   if (mensajeExito) mensajeExito.remove();
   
-  // Obtener valores
+ 
   const nombre = document.getElementById('nombre').value.trim();
   const phone = document.getElementById('phone').value.trim();
   const email = document.getElementById('email').value.trim();
@@ -20,7 +20,7 @@ function validarFormulario(event) {
   
   let hayErrores = false;
  
-  // Validar nombre
+  
   if (nombre === '') {
     mostrarError('nombre', 'El nombre es necesario');
     hayErrores = true;
@@ -32,13 +32,13 @@ function validarFormulario(event) {
     hayErrores = true;
   }
   
-  // Validar teléfono (opcional pero si hay valor, validarlo)
+ 
   if (phone !== '' && !phoneRegex.test(phone)) {
     mostrarError('phone', 'El teléfono debe tener 10 dígitos');
     hayErrores = true;
   }
   
-  // Validar email
+  
   if (email === '') {
     mostrarError('email', 'El correo electrónico es necesario');
     hayErrores = true;
@@ -47,7 +47,7 @@ function validarFormulario(event) {
     hayErrores = true;
   }
   
-  // Validar mensaje
+ 
   if (message === '') {
     mostrarError('message', 'El mensaje es necesario');
     hayErrores = true;
@@ -56,7 +56,7 @@ function validarFormulario(event) {
     hayErrores = true;
   }
   
-  // Si no hay errores, mostrar éxito
+ 
   if (!hayErrores) {
     const form = document.querySelector('form');
     const carta = document.createElement('div');
@@ -69,7 +69,7 @@ function validarFormulario(event) {
     carta.style.backgroundColor = 'rgba(0, 255, 0, 0.1)';
     form.insertAdjacentElement('afterend', carta);
     
-    // Limpiar formulario
+  
     document.getElementById('nombre').value = '';
     document.getElementById('phone').value = '';
     document.getElementById('email').value = '';
