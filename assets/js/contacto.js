@@ -31,9 +31,11 @@ function validarFormulario(event) {
     mostrarError('nombre', 'El nombre no puede ser solo números');
     hayErrores = true;
   }
-  
- 
-  if (phone !== '' && !phoneRegex.test(phone)) {
+
+  if (phone === '') {
+    mostrarError('phone', 'El teléfono es obligatorio');
+    hayErrores = true;
+  } else if (!phoneRegex.test(phone)) {
     mostrarError('phone', 'El teléfono debe tener 10 dígitos');
     hayErrores = true;
   }
@@ -61,7 +63,15 @@ function validarFormulario(event) {
     const form = document.querySelector('form');
     const carta = document.createElement('div');
     carta.className = 'success-message';
-    carta.innerHTML = `<p>¡Mensaje enviado correctamente! Nos contactaremos a ${email}</p>`;
+
+    carta.innerHTML = `
+    <p>¡Mensaje enviado correctamente!</p>
+    <p><strong>Nombre:</strong> ${nombre}</p>
+    <p><strong>Teléfono:</strong> ${phone}</p>
+    <p><strong>Email:</strong> ${email}</p>
+    <p><strong>Mensaje:</strong> ${message}</p>
+    `;
+
     carta.style.color = 'green';
     carta.style.padding = '15px';
     carta.style.marginTop = '20px';
